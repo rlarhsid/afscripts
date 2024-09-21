@@ -11,9 +11,11 @@ function createUI(thisObj) {
   win.preferredSize = [300, 150];
 
   win.orientation = "column";
+  win.alignChildren = ["center", "top"]; // Center align children
 
   var inputGroup1 = win.add("group", undefined, "Input Group 1");
   inputGroup1.orientation = "row";
+  inputGroup1.alignChildren = ["right", "center"]; // Align right
   inputGroup1.add("statictext", undefined, "정수 입력: ").preferredSize = [
     100, 30,
   ];
@@ -23,6 +25,7 @@ function createUI(thisObj) {
 
   var inputGroup2 = win.add("group", undefined, "Input Group 2");
   inputGroup2.orientation = "row";
+  inputGroup2.alignChildren = ["right", "center"]; // Align right
   inputGroup2.add("statictext", undefined, "Z값 변화량: ").preferredSize = [
     100, 30,
   ];
@@ -32,6 +35,7 @@ function createUI(thisObj) {
 
   var buttonGroup = win.add("group", undefined, "Button Group");
   buttonGroup.orientation = "row";
+  buttonGroup.alignChildren = ["center", "center"]; // Center align button
   var duplicateButton = buttonGroup.add("button", undefined, "PlumSnack");
   duplicateButton.preferredSize = [120, 40];
 
